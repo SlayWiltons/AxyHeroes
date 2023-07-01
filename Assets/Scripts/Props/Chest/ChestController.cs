@@ -6,24 +6,37 @@ using UnityEngine.EventSystems;
 
 public class ChestController : MonoBehaviour
 {
+    [SerializeField] private GameObject _textPlate;
+
     private InputAction TestInputAction;
     private PlayerInput _playerInput;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("Income" + collider.gameObject.name);
         _playerInput = collider.gameObject.GetComponent<PlayerInput>();
         TestInputAction = _playerInput.actions.FindAction("Action");
         TestInputAction.performed += Action;
+        ShowPlate(_textPlate);
     }
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        Debug.Log("Exit" + collider.gameObject.name);
+        HidePlate(_textPlate);
     }
 
     private void Action(InputAction.CallbackContext context)
     {
-        Debug.Log("Open the chest?");
+        HidePlate(_textPlate);
+        gameObject.SetActive(false);
+    }
+
+    private void ShowPlate(GameObject plate)
+    {
+        plate.SetActive(true);
+    }
+
+    private void HidePlate(GameObject plate)
+    {
+        plate.SetActive(false);
     }
 }
