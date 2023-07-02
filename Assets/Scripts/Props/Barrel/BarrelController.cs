@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.EventSystems;
 
-public class ChestController : BasePropsController
+
+public class BarrelController : BasePropsController
 {
     [SerializeField] private GameObject _textPlate;
 
