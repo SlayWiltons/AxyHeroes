@@ -6539,7 +6539,7 @@ GameObject:
   - component: {fileID: 1510300246}
   - component: {fileID: 1510300250}
   - component: {fileID: 1510300248}
-  - component: {fileID: 1510300249}
+  - component: {fileID: 1510300251}
   m_Layer: 0
   m_Name: Colliders_Tilemap
   m_TagString: Untagged
@@ -7581,7 +7581,28 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!66 &1510300249
+--- !u!50 &1510300250
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510300243}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!66 &1510300251
 CompositeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7594,8 +7615,8 @@ CompositeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.92, y: 0.56}
-  m_GeometryType: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -7627,41 +7648,20 @@ CompositeCollider2D:
         Y: -100000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 5.919971, y: -9.44}
-      - {x: 5.919971, y: -4.44}
-      - {x: 4.92, y: -4.440029}
-      - {x: 4.9199705, y: -5.44}
-      - {x: -7.08, y: -5.4399705}
-      - {x: -7.0800295, y: -4.44}
-      - {x: -8.08, y: -4.440029}
-      - {x: -8.07997, y: -9.44}
-    - - {x: 17.919971, y: -9.44}
-      - {x: 17.919971, y: -7.44}
-      - {x: 8.92, y: -7.4400296}
-      - {x: 8.920029, y: -9.44}
+    - - {x: 3, y: -5}
+      - {x: 2, y: -5}
+      - {x: 2, y: -6}
+      - {x: -10, y: -6}
+      - {x: -10, y: -5}
+      - {x: -11, y: -5}
+      - {x: -11, y: -10}
+      - {x: 3, y: -10}
+    - - {x: 15, y: -8}
+      - {x: 6, y: -8}
+      - {x: 6, y: -10}
+      - {x: 15, y: -10}
   m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
---- !u!50 &1510300250
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510300243}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_OffsetDistance: 0
 --- !u!1 &1582506518
 GameObject:
   m_ObjectHideFlags: 0
