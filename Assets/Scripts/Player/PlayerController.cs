@@ -30,6 +30,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnHoldAction(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("Hold Action");
+        }
+    }
+
     private void Move(Vector2 direction)
     {
         float scaleMoveSpeed = _moveSpeed * Time.deltaTime;
