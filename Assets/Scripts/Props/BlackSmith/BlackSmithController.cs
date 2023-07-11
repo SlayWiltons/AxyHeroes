@@ -25,6 +25,5 @@ public class BlackSmithController : BasePropsController
     public override void Action(InputAction.CallbackContext context)
     {
         HidePlate(_textPlate);
-
     }
 }

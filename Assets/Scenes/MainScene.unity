@@ -7912,6 +7912,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4568245014031028223, guid: bb0cf10640e40d34bb605df9063fc8e4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6752334779542876148, guid: bb0cf10640e40d34bb605df9063fc8e4, type: 3}
       propertyPath: m_SortingOrder
       value: 1
