@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,6 +44,9 @@ public class PlayerController : MonoBehaviour
         float scaleMoveSpeed = _moveSpeed * Time.deltaTime;
         Vector3 moveDirection = new Vector3(direction.x, direction.y, 0);
         transform.position += moveDirection * scaleMoveSpeed;
+
+        float angle = Mathf.Atan2(_moveDirection.x, _moveDirection.y) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private void FixedUpdate()
