@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3627360062097251542}
+  - component: {fileID: 8395375755906583816}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,6 +32,31 @@ Transform:
   m_Father: {fileID: 7393714862506268718}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &8395375755906583816
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4397422922479853727}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.46170568, y: -0.28337806}
+  - {x: -0.29930258, y: 0.15317738}
+  - {x: 0.25504124, y: 0.13788947}
+  - {x: 0.4310702, y: -0.29103702}
+  - {x: 0.4310702, y: -0.29103702}
+  m_AdjacentStartPoint: {x: 0, y: -0.285}
+  m_AdjacentEndPoint: {x: 0, y: -0.285}
+  m_UseAdjacentStartPoint: 1
+  m_UseAdjacentEndPoint: 1
 --- !u!1 &7393714862270981616
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 5
+  _attackArea: {fileID: 4397422922479853727}
 --- !u!114 &7393714862506268713
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
+    [SerializeField] private GameObject _attackArea;
     private Vector2 _moveDirection;
 
     public void OnMove(InputAction.CallbackContext context)
@@ -44,13 +45,18 @@ public class PlayerController : MonoBehaviour
         float scaleMoveSpeed = _moveSpeed * Time.deltaTime;
         Vector3 moveDirection = new Vector3(direction.x, direction.y, 0);
         transform.position += moveDirection * scaleMoveSpeed;
+    }
 
-        float angle = Mathf.Atan2(_moveDirection.x, _moveDirection.y) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    private void Rotate(Vector2 direction)
+    {
+        Vector3 moveDirection = new Vector3(direction.x, direction.y, 0);
+        float angle = Mathf.Atan2(moveDirection.x, moveDirection.y) * Mathf.Rad2Deg;
+        _attackArea.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private void FixedUpdate()
     {
         Move(_moveDirection);
+        Rotate(_moveDirection);
     }
 }
