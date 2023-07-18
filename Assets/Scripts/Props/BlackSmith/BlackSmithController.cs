@@ -10,16 +10,22 @@ public class BlackSmithController : BasePropsController
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        _playerInput = collider.gameObject.GetComponent<PlayerInput>();
-        TestInputAction = _playerInput.actions.FindAction("Action");
-        TestInputAction.performed += Action;
-        ShowPlate(_textPlate);
+        if (collider.gameObject.tag == "Player")
+        {
+            _playerInput = collider.gameObject.GetComponent<PlayerInput>();
+            TestInputAction = _playerInput.actions.FindAction("Action");
+            TestInputAction.performed += Action;
+            ShowPlate(_textPlate);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        TestInputAction.performed -= Action;
-        HidePlate(_textPlate);
+        if (collider.gameObject.tag == "Player")
+        {
+            TestInputAction.performed -= Action;
+            HidePlate(_textPlate);
+        }
     }
 
     public override void Action(InputAction.CallbackContext context)
