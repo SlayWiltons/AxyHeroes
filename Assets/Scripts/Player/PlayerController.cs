@@ -57,6 +57,9 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move(_moveDirection);
-        Rotate(_moveDirection);
+        if (_moveDirection.x != 0 || _moveDirection.y != 0)
+        {
+            Rotate(_moveDirection);
+        }
     }
 }
