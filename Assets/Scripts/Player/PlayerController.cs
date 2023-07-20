@@ -50,14 +50,14 @@ public class PlayerController : MonoBehaviour
     private void Rotate(Vector2 direction)
     {
         Vector3 moveDirection = new Vector3(direction.x, direction.y, 0);
-        float angle = Mathf.Atan2(moveDirection.x, moveDirection.y) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(-moveDirection.x, moveDirection.y) * Mathf.Rad2Deg;
         _attackArea.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private void FixedUpdate()
     {
         Move(_moveDirection);
-        if (_moveDirection.x != 0 || _moveDirection.y != 0)
+        if (-_moveDirection.x != 0 || _moveDirection.y != 0)
         {
             Rotate(_moveDirection);
         }
