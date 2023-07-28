@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3627360062097251542}
   - component: {fileID: 8395375755906583816}
+  - component: {fileID: 4841216750393896613}
   m_Layer: 0
   m_Name: AttackArea
   m_TagString: Untagged
@@ -56,6 +57,20 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 1.5}
   m_UseAdjacentStartPoint: 1
   m_UseAdjacentEndPoint: 1
+--- !u!114 &4841216750393896613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4397422922479853727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bbc6ac97464b9e4bb431cd63321c8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerInput: {fileID: 7393714862506268713}
+  _playerController: {fileID: 7393714862506268714}
 --- !u!1 &7393714862270981616
 GameObject:
   m_ObjectHideFlags: 0
