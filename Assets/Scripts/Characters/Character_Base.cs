@@ -8,6 +8,7 @@ public class Character_Base : ScriptableObject
 {
     public string Name;
     public RawImage Avatar;
+    [SerializeField] private bool isCharacter; 
 
     public enum Alignment
     {

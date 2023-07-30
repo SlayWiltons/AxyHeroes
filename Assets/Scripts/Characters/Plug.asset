@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 791a0a52d5ab0ea42ab2be9b8eaa8449, type: 3}
-  m_Name: Character_Base
+  m_Name: Plug
   m_EditorClassIdentifier: 
-  Name: 
+  Name: plug
   Avatar: {fileID: 0}
+  isCharacter: 0
   CharAlignment: 0
   BaseStats: {fileID: 0}
