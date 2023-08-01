@@ -18,6 +18,4 @@ public class Character_Base : ScriptableObject
     }
 
     public Alignment CharAlignment;
-
-    public Stats_Base BaseStats;
 }

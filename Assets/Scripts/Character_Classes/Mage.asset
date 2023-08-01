@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 791a0a52d5ab0ea42ab2be9b8eaa8449, type: 3}
-  m_Name: Plug
+  m_Script: {fileID: 11500000, guid: 28523d9e68e4e084280d080fdef9ff12, type: 3}
+  m_Name: Mage
   m_EditorClassIdentifier: 
-  Name: plug
-  Avatar: {fileID: 0}
-  isCharacter: 0
-  CharAlignment: 0
-  BaseStats: {fileID: 0}
+  Name: Mage
+  Str: 3
+  Agi: 4
+  Int: 8
+  End: 4
+  Wis: 7
+  Per: 5
+  Luc: 4
