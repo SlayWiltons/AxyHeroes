@@ -13146,6 +13146,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _classesContainer: {fileID: 1700865788}
+  _className: {fileID: 1378676605}
+  _classSTR: {fileID: 1215038441}
+  _classAGI: {fileID: 414058800}
+  _classINT: {fileID: 1768637207}
+  _classEND: {fileID: 1860212190}
+  _classWIS: {fileID: 1291280964}
+  _classPER: {fileID: 1820246955}
+  _classLUC: {fileID: 2016192248}
 --- !u!1 &1550578457
 GameObject:
   m_ObjectHideFlags: 0
@@ -15482,7 +15490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &1993992025
 Camera:
   m_ObjectHideFlags: 0
