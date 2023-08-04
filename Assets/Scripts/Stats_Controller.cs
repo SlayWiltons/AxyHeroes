@@ -12,6 +12,8 @@ public class Stats_Controller : MonoBehaviour
     [SerializeField] private TMP_Text _classWIS;
     [SerializeField] private TMP_Text _classPER;
     [SerializeField] private TMP_Text _classLUC;
+    [SerializeField] private TMP_Text _freePoints;
+    [SerializeField] private int _freeAttributesPoints;
     private int _classesCount;
 
     private void Start()
