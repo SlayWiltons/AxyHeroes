@@ -14,29 +14,59 @@ public class Stats_Controller : MonoBehaviour
     [SerializeField] private TMP_Text _classLUC;
     [SerializeField] private TMP_Text _freePoints;
     [SerializeField] private int _freeAttributesPoints;
+    private string _name;
     private int _classesCount;
+    private int _freeAttribPoints;
+    private int _str;
+    private int _agi;
+    private int _int;
+    private int _end;
+    private int _wis;
+    private int _per;
+    private int _luck;
+
 
     private void Start()
     {
         _classesCount = _classesContainer.ClassesCount();
-        SetClassParams(0);
-        Debug.Log(_classesCount);
-    }
-
-    private void SetClassParams(int i)
-    {
+        _freeAttribPoints = _freeAttributesPoints;
         if (_classesCount != 0)
         {
-            _className.text = _classesContainer.CharacterClass(i).Name;
-            _classSTR.text = _classesContainer.CharacterClass(i).Str.ToString();
-            _classAGI.text = _classesContainer.CharacterClass(i).Agi.ToString();
-            _classINT.text = _classesContainer.CharacterClass(i).Int.ToString();
-            _classEND.text = _classesContainer.CharacterClass(i).End.ToString();
-            _classWIS.text = _classesContainer.CharacterClass(i).Wis.ToString();
-            _classPER.text = _classesContainer.CharacterClass(i).Per.ToString();
-            _classLUC.text = _classesContainer.CharacterClass(i).Luc.ToString();
+            GetClassParams(0);
+            SetClassParams();
         }
         else return;
     }
 
+    private void GetClassParams(int i)
+    {
+        _name = _classesContainer.CharacterClass(i).name;
+        _str = _classesContainer.CharacterClass(i).Str;
+        _agi = _classesContainer.CharacterClass(i).Agi;
+        _int = _classesContainer.CharacterClass(i).Int;
+        _end = _classesContainer.CharacterClass(i).End;
+        _wis = _classesContainer.CharacterClass(i).Wis;
+        _per = _classesContainer.CharacterClass(i).Per;
+        _luck = _classesContainer.CharacterClass(i).Luc;
+    }
+
+    private void SetClassParams()
+    {
+        _className.text = _name;
+        _classSTR.text = _str.ToString();
+        _classAGI.text = _agi.ToString();
+        _classINT.text = _int.ToString();
+        _classEND.text = _end.ToString();
+        _classWIS.text = _wis.ToString();
+        _classPER.text = _per.ToString();
+        _classLUC.text = _luck.ToString();
+    }
+
+    public void AddPoints(TMP_Text attribute)
+    {
+        if (_freeAttribPoints > 0)
+        {
+            _freeAttribPoints -= 1;
+        }
+    }
 }
