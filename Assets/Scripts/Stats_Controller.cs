@@ -38,6 +38,8 @@ public class Stats_Controller : MonoBehaviour
         else return;
     }
 
+    
+
     private void GetClassParams(int i)
     {
         _name = _classesContainer.CharacterClass(i).name;
