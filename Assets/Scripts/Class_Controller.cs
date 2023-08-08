@@ -23,14 +23,14 @@ public class Class_Controller : MonoBehaviour
     {
         if (isClassesExist())
         {
-            SetClassName(0);
+            _classId = 0;
+            SetClassName();
         }
     }
 
-    private void SetClassName(int i)
+    private void SetClassName()
     {
-        _classId = i;
-        _className.text = _classesContainer.CharacterClass(i).Name;
+        _className.text = _classesContainer.CharacterClass(_classId).Name;
     }
 
     private void ChangeClass(int delta)
@@ -44,7 +44,7 @@ public class Class_Controller : MonoBehaviour
         {
             _classId = 0;
         }
-        SetClassName(_classId);
+        SetClassName();
     }
 
     public void OnPrevClick()

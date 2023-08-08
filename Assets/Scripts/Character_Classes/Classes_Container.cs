@@ -14,5 +14,4 @@ public class Classes_Container : MonoBehaviour
     {
         return _characterClasses.Count;
     }
-
 }

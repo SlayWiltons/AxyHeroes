@@ -24,7 +24,7 @@ public class Stats_Controller : MonoBehaviour
     private int _wis;
     private int _per;
     private int _luck;
-
+    private int _classId;
 
     private void Start()
     {
@@ -32,13 +32,12 @@ public class Stats_Controller : MonoBehaviour
         _freeAttribPoints = _freeAttributesPoints;
         if (_classesCount != 0)
         {
-            GetClassParams(0);
+            _classId = 0;
+            GetClassParams(_classId);
             SetClassParams();
         }
         else return;
     }
-
-    
 
     private void GetClassParams(int i)
     {
