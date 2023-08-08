@@ -4,10 +4,13 @@ using UnityEngine;
 public class Class_Controller : MonoBehaviour
 {
     [SerializeField] private Classes_Container _classesContainer;
+    [SerializeField] private TMP_Text _freePointsText;
     [SerializeField] private TMP_Text _className;
+    [SerializeField] private int _freePointBase;
 
     private int _classesCount;
     private int _classId;
+    private int _freePoints;
 
     private bool isClassesExist()
     {
@@ -26,6 +29,9 @@ public class Class_Controller : MonoBehaviour
             _classId = 0;
             SetClassName();
         }
+
+        _freePoints = _freePointBase;
+        _freePointsText.text = _freePoints.ToString();
     }
 
     private void SetClassName()
