@@ -7702,7 +7702,7 @@ GameObject:
   - component: {fileID: 414058801}
   - component: {fileID: 414058800}
   m_Layer: 5
-  m_Name: Atributes_Number (1)
+  m_Name: Atributes_Number_AGI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10548,7 +10548,7 @@ GameObject:
   - component: {fileID: 1215038442}
   - component: {fileID: 1215038441}
   m_Layer: 5
-  m_Name: Atributes_Number
+  m_Name: Atributes_Number_STR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10953,7 +10953,7 @@ GameObject:
   - component: {fileID: 1291280965}
   - component: {fileID: 1291280964}
   m_Layer: 5
-  m_Name: Atributes_Number (4)
+  m_Name: Atributes_Number_WIS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13444,6 +13444,13 @@ MonoBehaviour:
   _freePointsText: {fileID: 1067759291}
   _className: {fileID: 1378676605}
   _freePointBase: 5
+  _classSTR: {fileID: 0}
+  _classAGI: {fileID: 0}
+  _classINT: {fileID: 0}
+  _classEND: {fileID: 0}
+  _classWIS: {fileID: 0}
+  _classPER: {fileID: 0}
+  _classLUC: {fileID: 0}
 --- !u!1 &1550578457
 GameObject:
   m_ObjectHideFlags: 0
@@ -14710,7 +14717,7 @@ GameObject:
   - component: {fileID: 1768637208}
   - component: {fileID: 1768637207}
   m_Layer: 5
-  m_Name: Atributes_Number (2)
+  m_Name: Atributes_Number_INT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14906,7 +14913,7 @@ GameObject:
   - component: {fileID: 1820246956}
   - component: {fileID: 1820246955}
   m_Layer: 5
-  m_Name: Atributes_Number (5)
+  m_Name: Atributes_Number_PER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15163,7 +15170,7 @@ GameObject:
   - component: {fileID: 1860212191}
   - component: {fileID: 1860212190}
   m_Layer: 5
-  m_Name: Atributes_Number (3)
+  m_Name: Atributes_Number_END
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15717,7 +15724,7 @@ GameObject:
   - component: {fileID: 2016192249}
   - component: {fileID: 2016192248}
   m_Layer: 5
-  m_Name: Atributes_Number (6)
+  m_Name: Atributes_Number_LUC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
