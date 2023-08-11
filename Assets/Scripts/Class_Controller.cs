@@ -16,6 +16,9 @@ public class Class_Controller : MonoBehaviour
     [SerializeField] private TMP_Text _classPER;
     [SerializeField] private TMP_Text _classLUC;
 
+    [SerializeField] private GameObject _plusButtons;
+    [SerializeField] private GameObject _minusButtons;
+
     private int _classesCount;
     private int _classId;
     private int _freePoints;
@@ -38,7 +41,7 @@ public class Class_Controller : MonoBehaviour
         else return false;
     }
 
-    private void Start()
+    private void Start()    //В будущем заменить на OnEnable
     {
         if (isClassesExist())
         {
@@ -103,5 +106,10 @@ public class Class_Controller : MonoBehaviour
     private void SetAtributeValue(TMP_Text atributeText, int atributeValue)
     {
         atributeText.text = atributeValue.ToString();
+    }
+
+    private void OnPlusClick()
+    {
+
     }
 }
