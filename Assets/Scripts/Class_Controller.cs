@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -16,8 +17,8 @@ public class Class_Controller : MonoBehaviour
     [SerializeField] private TMP_Text _classPER;
     [SerializeField] private TMP_Text _classLUC;
 
-    [SerializeField] private GameObject _plusButtons;
-    [SerializeField] private GameObject _minusButtons;
+    [SerializeField] private List<GameObject> _plusButtons;
+    [SerializeField] private List<GameObject> _minusButtons;
 
     private int _classesCount;
     private int _classId;
@@ -52,6 +53,11 @@ public class Class_Controller : MonoBehaviour
 
         _freePoints = _freePointBase;
         _freePointsText.text = _freePoints.ToString();
+        if (_freePoints != 0)
+        {
+            _plusButtons.ToArray();
+            _minusButtons.ToArray();
+        }
     }
 
     private void SetClassName()
@@ -108,8 +114,33 @@ public class Class_Controller : MonoBehaviour
         atributeText.text = atributeValue.ToString();
     }
 
-    private void OnPlusClick()
+    private void ChangeFreePoints(int delta, int atribute, TMP_Text atributeText, int atrinuteId) // 0 - str, 1 - agi, 2 - int, 3 - end, 4 - wis, 5 - per, 6 - luc
     {
+        atribute += delta;
+        _freePoints -= delta;
+        atributeText.text = atribute.ToString();
 
+
+
+        if (_freePoints == 0)
+        {
+            for (int i = 0; i < _minusButtons.Count; i++)
+            {
+                HideButtons(_plusButtons);
+            }
+        }
+        else if (_freePoints == _freePointBase)
+        {
+            HideButtons(_minusButtons);
+        }
+
+    }
+
+    private void HideButtons(List<GameObject> _listOfButtons)
+    {
+        for (int i = 0; i < _listOfButtons.Count; i++)
+        {
+            _listOfButtons[i].SetActive(false);
+        }
     }
 }
