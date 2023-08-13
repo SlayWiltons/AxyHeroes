@@ -55,8 +55,10 @@ public class Class_Controller : MonoBehaviour
         _freePointsText.text = _freePoints.ToString();
         if (_freePoints != 0)
         {
-            _plusButtons.ToArray();
-            _minusButtons.ToArray();
+            for (int i = 0; i < _plusButtons.Count; i++)
+            {
+                _plusButtons[i].SetActive(true);
+            }
         }
     }
 
@@ -114,13 +116,31 @@ public class Class_Controller : MonoBehaviour
         atributeText.text = atributeValue.ToString();
     }
 
-    private void ChangeFreePoints(int delta, int atribute, TMP_Text atributeText, int atrinuteId) // 0 - str, 1 - agi, 2 - int, 3 - end, 4 - wis, 5 - per, 6 - luc
+    public void OnStrPlusClick()
+    {
+        ChangeFreePoints(1, _classesContainer.CharacterClass(_classId).Str, _str, _classSTR, 0);
+    }
+
+    public void OnStrMinusClick()
+    {
+        ChangeFreePoints(-1, _classesContainer.CharacterClass(_classId).Str, _str, _classSTR, 0);
+    }
+
+    private void ChangeFreePoints(int delta, int minValue, int atribute, TMP_Text atributeText, int atrinuteId) // 0 - str, 1 - agi, 2 - int, 3 - end, 4 - wis, 5 - per, 6 - luc
     {
         atribute += delta;
-        _freePoints -= delta;
+        Debug.Log(_str);
+        if (atribute - minValue == 1)
+        {
+            _minusButtons[atrinuteId].SetActive(true);
+        }
+        else if (atribute - minValue == 0)
+        {
+            _minusButtons[atrinuteId].SetActive(false);
+        }
         atributeText.text = atribute.ToString();
-
-
+        _freePoints -= delta;
+        _freePointsText.text = _freePoints.ToString();
 
         if (_freePoints == 0)
         {
@@ -133,7 +153,6 @@ public class Class_Controller : MonoBehaviour
         {
             HideButtons(_minusButtons);
         }
-
     }
 
     private void HideButtons(List<GameObject> _listOfButtons)
