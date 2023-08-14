@@ -11426,19 +11426,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1347581860}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1529621507}
-        m_TargetAssemblyTypeName: Class_Controller, Assembly-CSharp
-        m_MethodName: OnStrMinusClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1347581860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15150,7 +15138,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1529621507}
         m_TargetAssemblyTypeName: Class_Controller, Assembly-CSharp
-        m_MethodName: OnStrPlusClick
+        m_MethodName: StrPlusPoint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
