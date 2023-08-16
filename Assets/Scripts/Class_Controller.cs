@@ -101,21 +101,7 @@ public class Class_Controller : MonoBehaviour
         SetAllAtributes();
     }
 
-    public void StrPlusPoint()
-    {
-        _str += 1;
-        SetAtributeValue(_classSTR, _str);
-        ChangePoints(1, _str, _classesContainer.CharacterClass(_classId).Str, 0);
-    }
-
-    public void StrMinusPoint()
-    {
-        _str -= 1;
-        SetAtributeValue(_classSTR, _str);
-        ChangePoints(-1, _str, _classesContainer.CharacterClass(_classId).Str, 0);
-    }
-
-    private void ChangePoints(int delta, int atribute, int atributeFromCharacterClass, int atributeId)
+    private void ChangePoints(int delta, int atribute, int atributeFromCharacterClass, int atributeId)  //0-str, 1-agi, 2-int, 3-end, 4-wis, 5-per, 6-luc
     {
         if (atribute - atributeFromCharacterClass == 1)
         {
@@ -143,16 +129,6 @@ public class Class_Controller : MonoBehaviour
         }
     }
 
-    public void OnPrevClick()
-    {
-        ChangeClass(-1);
-    }
-
-    public void OnNextClick()
-    {
-        ChangeClass(1);
-    }
-
     private void SetAtributeValue(TMP_Text atributeText, int atributeValue)
     {
         atributeText.text = atributeValue.ToString();
@@ -164,5 +140,113 @@ public class Class_Controller : MonoBehaviour
         {
             _listOfButtons[i].SetActive(false);
         }
+    }
+
+    public void OnNextClick()
+    {
+        ChangeClass(1);
+    }
+
+    public void OnPrevClick()
+    {
+        ChangeClass(-1);
+    }
+
+    public void StrPlusPoint()
+    {
+        _str += 1;
+        SetAtributeValue(_classSTR, _str);
+        ChangePoints(1, _str, _classesContainer.CharacterClass(_classId).Str, 0);
+    }
+
+    public void StrMinusPoint()
+    {
+        _str -= 1;
+        SetAtributeValue(_classSTR, _str);
+        ChangePoints(-1, _str, _classesContainer.CharacterClass(_classId).Str, 0);
+    }
+
+    public void AgiPlusPoint()
+    {
+        _agi += 1;
+        SetAtributeValue(_classAGI, _agi);
+        ChangePoints(1, _agi, _classesContainer.CharacterClass(_classId).Agi, 0);
+    }
+
+    public void AgiMinusPoint()
+    {
+        _agi -= 1;
+        SetAtributeValue(_classAGI, _agi);
+        ChangePoints(-1, _agi, _classesContainer.CharacterClass(_classId).Agi, 0);
+    }
+
+    public void IntPlusPoint()
+    {
+        _int += 1;
+        SetAtributeValue(_classINT, _int);
+        ChangePoints(1, _int, _classesContainer.CharacterClass(_classId).Int, 0);
+    }
+
+    public void IntMinusPoint()
+    {
+        _int -= 1;
+        SetAtributeValue(_classINT, _int);
+        ChangePoints(-1, _int, _classesContainer.CharacterClass(_classId).Int, 0);
+    }
+
+    public void EndPlusPoint()
+    {
+        _end += 1;
+        SetAtributeValue(_classEND, _end);
+        ChangePoints(1, _end, _classesContainer.CharacterClass(_classId).End, 0);
+    }
+
+    public void EndMinusPoint()
+    {
+        _end -= 1;
+        SetAtributeValue(_classEND, _end);
+        ChangePoints(-1, _end, _classesContainer.CharacterClass(_classId).End, 0);
+    }
+
+    public void WisPlusPoint()
+    {
+        _wis += 1;
+        SetAtributeValue(_classWIS, _wis);
+        ChangePoints(1, _wis, _classesContainer.CharacterClass(_classId).Wis, 0);
+    }
+
+    public void WisMinusPoint()
+    {
+        _wis -= 1;
+        SetAtributeValue(_classWIS, _wis);
+        ChangePoints(-1, _wis, _classesContainer.CharacterClass(_classId).Wis, 0);
+    }
+
+    public void PerPlusPoint()
+    {
+        _per += 1;
+        SetAtributeValue(_classPER, _per);
+        ChangePoints(1, _per, _classesContainer.CharacterClass(_classId).Per, 0);
+    }
+
+    public void PerMinusPoint()
+    {
+        _per -= 1;
+        SetAtributeValue(_classPER, _per);
+        ChangePoints(-1, _per, _classesContainer.CharacterClass(_classId).Per, 0);
+    }
+
+    public void LucPlusPoint()
+    {
+        _luc += 1;
+        SetAtributeValue(_classLUC, _luc);
+        ChangePoints(1, _luc, _classesContainer.CharacterClass(_classId).Luc, 0);
+    }
+
+    public void LucMinusPoint()
+    {
+        _luc -= 1;
+        SetAtributeValue(_classLUC, _luc);
+        ChangePoints(-1, _luc, _classesContainer.CharacterClass(_classId).Luc, 0);
     }
 }
