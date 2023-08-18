@@ -20,6 +20,22 @@ public class Class_Controller : MonoBehaviour
     [SerializeField] private List<GameObject> _plusButtons;
     [SerializeField] private List<GameObject> _minusButtons;
 
+    
+    public enum Affinity
+    {
+        lawGood,
+        neutGood,
+        chaoGood,
+        lawNeut,
+        Neut,
+        chaoNeut,
+        lawEvil,
+        neutEvil,
+        chaoEvil
+    }
+
+    public Affinity CharAffinity;
+
     private int _classesCount;
     private int _classId;
     private int _freePoints;
@@ -31,6 +47,8 @@ public class Class_Controller : MonoBehaviour
     private int _wis;
     private int _per;
     private int _luc;
+
+
 
     private bool isClassesExist()
     {
