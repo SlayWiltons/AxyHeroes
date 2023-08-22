@@ -13035,6 +13035,7 @@ GameObject:
   - component: {fileID: 1322702049}
   - component: {fileID: 1322702048}
   - component: {fileID: 1322702047}
+  - component: {fileID: 1322702050}
   m_Layer: 0
   m_Name: Portret_Name_Gender
   m_TagString: Untagged
@@ -13133,6 +13134,30 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1322702050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322702045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d8a55f6b5674c4c95fc6d504f4c757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  classChooseModule: {fileID: 0}
+  _portret: {fileID: 865042455}
+  _malePortrets: []
+  _femalePortrets:
+  - {fileID: 21300000, guid: 341c1826760a0644198861e7104c8bd9, type: 3}
+  - {fileID: 21300000, guid: bf6b9aee5bbdf0b43846ef84df7e388d, type: 3}
+  - {fileID: 21300000, guid: 7ff069970bc8f0142bfd6baeefd382ce, type: 3}
+  - {fileID: 21300000, guid: bb9db90bd5ebac840b7ef974f1641792, type: 3}
+  - {fileID: 21300000, guid: df324501b7a8d264db9b9429ad718aab, type: 3}
+  - {fileID: 21300000, guid: 15e23292701199f429e8d626b1841a11, type: 3}
+  - {fileID: 21300000, guid: 888d4413818e2114bae7fbec109615e2, type: 3}
+  - {fileID: 21300000, guid: ae83e456096135b458920d1464437606, type: 3}
 --- !u!1 &1347581857
 GameObject:
   m_ObjectHideFlags: 0
