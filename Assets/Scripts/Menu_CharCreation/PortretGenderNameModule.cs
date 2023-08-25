@@ -10,27 +10,63 @@ public class PortretGenderNameModule : MenuModule
     [SerializeField] private Image _portret;
     [SerializeField] private Button _maleButton;
     [SerializeField] private Button _femaleButton;
-    [SerializeField] private List<Texture> _malePortrets;
+    [SerializeField] private List<Sprite> _malePortrets;
     [SerializeField] private List<Sprite> _femalePortrets;
     private Color _selectedColor = Color.green;
     private Color _normalColor = Color.white;
     private int _portretId = 0;
+    private bool isMaleChoose = false;
+    private bool isFemaleChoose = false;
 
     public void ChooseMalePortrets()
     {
-        ChangeColor(_maleButton, _selectedColor);
-        ChangeColor(_femaleButton, _normalColor);
+        if (_malePortrets.Count != 0)
+        {
+            isMaleChoose = true;
+            isFemaleChoose = false;
+            ChangeColor(_maleButton, _selectedColor);
+            ChangeColor(_femaleButton, _normalColor);
+        }
+        else
+        {
+            ChangeColor(_maleButton, _normalColor);
+            isMaleChoose = false;
+            isFemaleChoose = false;
+        }
     }
 
     public void ChooseFemalePortrets()
     {
-        ChangeColor(_femaleButton, _selectedColor);
-        ChangeColor(_maleButton, _normalColor);
+        if (_femalePortrets.Count != 0)
+        {
+            isFemaleChoose = true;
+            isMaleChoose = false;
+            ChangeColor(_femaleButton, _selectedColor);
+            ChangeColor(_maleButton, _normalColor);
+        }
+        else
+        {
+            ChangeColor(_femaleButton, _normalColor);
+            isMaleChoose = false;
+            isFemaleChoose = false;
+        }
     }
 
     public void OnEnable()
     {
-        _portret.sprite = _femalePortrets[_portretId];
+        ChooseMalePortrets();
+        if (isMaleChoose == true)
+        {
+            _portret.sprite = _malePortrets[_portretId];
+        }
+        else
+        {
+            ChooseFemalePortrets();
+            if (isFemaleChoose == true)
+            {
+                _portret.sprite = _femalePortrets[_portretId];
+            }
+        }
     }
 
     public void NextPortret()
@@ -55,6 +91,7 @@ public class PortretGenderNameModule : MenuModule
         colors.highlightedColor = color;
         colors.normalColor = color;
         colors.pressedColor = color;
+        colors.selectedColor = color;
         button.GetComponent<Button>().colors = colors;
     }
 
