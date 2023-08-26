@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
@@ -10,6 +11,7 @@ public class PortretGenderNameModule : MenuModule
     [SerializeField] private Image _portret;
     [SerializeField] private Button _maleButton;
     [SerializeField] private Button _femaleButton;
+    [SerializeField] private TMP_InputField _characterNameInput;
     [SerializeField] private List<Sprite> _malePortrets;
     [SerializeField] private List<Sprite> _femalePortrets;
     private Color _selectedColor = Color.green;
@@ -17,6 +19,12 @@ public class PortretGenderNameModule : MenuModule
     private int _portretId = 0;
     private bool isMaleChoose = false;
     private bool isFemaleChoose = false;
+    private string _characterName;
+
+    public string Name()
+    {
+        return _characterName;
+    }
 
     public void ChooseMalePortrets()
     {
@@ -81,8 +89,14 @@ public class PortretGenderNameModule : MenuModule
 
     public override void NextModule()
     {
+        _characterName = _characterNameInput.text;
         classChooseModule.SetActive(true);
         gameObject.SetActive(false);
+    }
+
+    public void Exit()
+    {
+        
     }
 
     private void ChangeColor(Button button, Color color)
