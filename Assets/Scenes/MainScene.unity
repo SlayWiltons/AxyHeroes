@@ -13312,7 +13312,11 @@ MonoBehaviour:
   _maleButton: {fileID: 1446631032}
   _femaleButton: {fileID: 1506434253}
   _characterNameInput: {fileID: 313828168}
-  _malePortrets: []
+  _malePortrets:
+  - {fileID: 21300000, guid: 568c2e4559511c5459c91123d377e12f, type: 3}
+  - {fileID: 21300000, guid: 7f0924f7eec639848b540db16a998ae4, type: 3}
+  - {fileID: 21300000, guid: 93bbdef2643199a40a85fc4f84d33d8e, type: 3}
+  - {fileID: 21300000, guid: 198ae7151eeb32241831eb4cc46afab2, type: 3}
   _femalePortrets:
   - {fileID: 21300000, guid: 341c1826760a0644198861e7104c8bd9, type: 3}
   - {fileID: 21300000, guid: bf6b9aee5bbdf0b43846ef84df7e388d, type: 3}

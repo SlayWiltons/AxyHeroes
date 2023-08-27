@@ -28,63 +28,43 @@ public class PortretGenderNameModule : MenuModule
 
     public void ChooseMalePortrets()
     {
-        if (_malePortrets.Count != 0)
-        {
-            isMaleChoose = true;
-            isFemaleChoose = false;
-            ChangeColor(_maleButton, _selectedColor);
-            ChangeColor(_femaleButton, _normalColor);
-        }
-        else
-        {
-            ChangeColor(_maleButton, _normalColor);
-            isMaleChoose = false;
-            isFemaleChoose = false;
-        }
+        isMaleChoose = true;
+        isFemaleChoose = false;
+        ChangeColor(_maleButton, _selectedColor);
+        ChangeColor(_femaleButton, _normalColor);
+        _portret.sprite = _malePortrets[0];
     }
 
     public void ChooseFemalePortrets()
     {
-        if (_femalePortrets.Count != 0)
-        {
-            isFemaleChoose = true;
-            isMaleChoose = false;
-            ChangeColor(_femaleButton, _selectedColor);
-            ChangeColor(_maleButton, _normalColor);
-        }
-        else
-        {
-            ChangeColor(_femaleButton, _normalColor);
-            isMaleChoose = false;
-            isFemaleChoose = false;
-        }
+        isFemaleChoose = true;
+        isMaleChoose = false;
+        ChangeColor(_femaleButton, _selectedColor);
+        ChangeColor(_maleButton, _normalColor);
+        _portret.sprite = _femalePortrets[0];
     }
 
     public void OnEnable()
     {
         ChooseMalePortrets();
-        if (isMaleChoose == true)
-        {
-            _portret.sprite = _malePortrets[_portretId];
-        }
-        else
-        {
-            ChooseFemalePortrets();
-            if (isFemaleChoose == true)
-            {
-                _portret.sprite = _femalePortrets[_portretId];
-            }
-        }
     }
 
     public void NextPortret()
     {
-        ChangePortret(1);
+        if (isMaleChoose)
+        {
+            ChangePortret(1, _malePortrets);
+        }
+        else ChangePortret(1, _femalePortrets);
     }
 
     public void PrevPortret()
     {
-        ChangePortret(-1);
+        if (isMaleChoose)
+        {
+            ChangePortret(-1, _malePortrets);
+        }
+        else ChangePortret(-1, _femalePortrets);
     }
 
     public override void NextModule()
@@ -109,17 +89,17 @@ public class PortretGenderNameModule : MenuModule
         button.GetComponent<Button>().colors = colors;
     }
 
-    private void ChangePortret(int delta)
+    private void ChangePortret(int delta, List<Sprite> portretsList)
     {
         _portretId += delta;
-        if (_femalePortrets.Count - 1 < _portretId)
+        if (portretsList.Count - 1 < _portretId)
         {
             _portretId = 0;
         }
         else if (_portretId < 0)
         {
-            _portretId = _femalePortrets.Count - 1;
+            _portretId = portretsList.Count - 1;
         }
-        _portret.sprite = _femalePortrets[_portretId];
+        _portret.sprite = portretsList[_portretId];
     }
 }
