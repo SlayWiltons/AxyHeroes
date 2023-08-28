@@ -26,6 +26,16 @@ public class PortretGenderNameModule : MenuModule
         return _characterName;
     }
 
+    public bool IsMale()
+    {
+        return isMaleChoose;
+    }
+
+    public bool IsFemale()
+    {
+        return isFemaleChoose;
+    }
+
     public void ChooseMalePortrets()
     {
         isMaleChoose = true;
