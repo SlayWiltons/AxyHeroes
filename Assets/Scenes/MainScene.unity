@@ -11077,6 +11077,7 @@ GameObject:
   - component: {fileID: 493268727}
   - component: {fileID: 493268726}
   - component: {fileID: 493268725}
+  - component: {fileID: 493268729}
   m_Layer: 5
   m_Name: Class_Stats
   m_TagString: Untagged
@@ -11156,6 +11157,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b13e838ebd386a44953683bee31433a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _classesContainer: {fileID: 493268729}
+  _freePointsText: {fileID: 1565358324}
+  _className: {fileID: 152798637}
+  _classSTR: {fileID: 0}
+  _classAGI: {fileID: 0}
+  _classINT: {fileID: 0}
+  _classEND: {fileID: 0}
+  _classWIS: {fileID: 0}
+  _classPER: {fileID: 0}
+  _classLUC: {fileID: 0}
+  _plusButtons: []
+  _minusButtons: []
 --- !u!114 &493268726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11217,6 +11230,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &493268729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493268723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8025728bac7e16b47bd6bb903b950ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterClasses:
+  - {fileID: 11400000, guid: 7d5bc061bfb47ca4490aaa771bc9c020, type: 2}
+  - {fileID: 11400000, guid: 7227f91f31fa34b4898022f1e823cc1c, type: 2}
+  - {fileID: 11400000, guid: bbf62e3b1780b964aa700ae64e2a59bc, type: 2}
 --- !u!1 &498962358
 GameObject:
   m_ObjectHideFlags: 0
