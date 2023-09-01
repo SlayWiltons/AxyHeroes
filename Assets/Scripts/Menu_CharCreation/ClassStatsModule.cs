@@ -6,6 +6,7 @@ public class ClassStatsModule : MenuModule
 {
     [SerializeField] private Classes_Container _classesContainer;
 
+    [SerializeField] private int _freePointBase;
     [SerializeField] private TMP_Text _freePointsText;
     [SerializeField] private TMP_Text _className;
 
