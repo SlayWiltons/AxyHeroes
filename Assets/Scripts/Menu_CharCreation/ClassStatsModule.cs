@@ -21,6 +21,9 @@ public class ClassStatsModule : MenuModule
     [SerializeField] private List<GameObject> _plusButtons;
     [SerializeField] private List<GameObject> _minusButtons;
 
+    [SerializeField] private GameObject nextModule;
+    [SerializeField] private GameObject prevModule;
+
     private int _classesCount;
     private int _classId;
     private int _freePoints;
@@ -141,8 +144,22 @@ public class ClassStatsModule : MenuModule
         ChangePoints(-1, _luc, _classesContainer.CharacterClass(_classId).Luc, 6);
     }
 
+    public override void NextModule()
+    {
+        //nextModule.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+    public override void PrevModule()
+    {
+        prevModule.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+
     private void OnEnable()
     {
+        _classesCount = _classesContainer.ClassesCount();
         _classId = 0;
         SetClassName();
         SetAllAtributes();

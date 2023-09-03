@@ -7,7 +7,7 @@ using Image = UnityEngine.UI.Image;
 
 public class PortretGenderNameModule : MenuModule
 {
-    [SerializeField] private GameObject classChooseModule;
+    [SerializeField] private GameObject nextModule;
     [SerializeField] private Image _portret;
     [SerializeField] private Button _maleButton;
     [SerializeField] private Button _femaleButton;
@@ -80,7 +80,7 @@ public class PortretGenderNameModule : MenuModule
     public override void NextModule()
     {
         _characterName = _characterNameInput.text;
-        classChooseModule.SetActive(true);
+        nextModule.SetActive(true);
         gameObject.SetActive(false);
     }
 
