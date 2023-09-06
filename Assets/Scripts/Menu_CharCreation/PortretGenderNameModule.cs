@@ -17,8 +17,8 @@ public class PortretGenderNameModule : MenuModule
     private Color _selectedColor = Color.green;
     private Color _normalColor = Color.white;
     private int _portretId = 0;
-    private bool isMaleChoose = false;
-    private bool isFemaleChoose = false;
+    private bool _isMaleChoose = false;
+    private bool _isFemaleChoose = false;
     private string _characterName;
 
     public string Name()
@@ -26,20 +26,25 @@ public class PortretGenderNameModule : MenuModule
         return _characterName;
     }
 
+    public Sprite Portet()
+    {
+        return _portret.sprite;
+    }
+
     public bool IsMale()
     {
-        return isMaleChoose;
+        return _isMaleChoose;
     }
 
     public bool IsFemale()
     {
-        return isFemaleChoose;
+        return _isFemaleChoose;
     }
 
     public void ChooseMalePortrets()
     {
-        isMaleChoose = true;
-        isFemaleChoose = false;
+        _isMaleChoose = true;
+        _isFemaleChoose = false;
         ChangeColor(_maleButton, _selectedColor);
         ChangeColor(_femaleButton, _normalColor);
         _portret.sprite = _malePortrets[0];
@@ -47,8 +52,8 @@ public class PortretGenderNameModule : MenuModule
 
     public void ChooseFemalePortrets()
     {
-        isFemaleChoose = true;
-        isMaleChoose = false;
+        _isFemaleChoose = true;
+        _isMaleChoose = false;
         ChangeColor(_femaleButton, _selectedColor);
         ChangeColor(_maleButton, _normalColor);
         _portret.sprite = _femalePortrets[0];
@@ -61,7 +66,7 @@ public class PortretGenderNameModule : MenuModule
 
     public void NextPortret()
     {
-        if (isMaleChoose)
+        if (_isMaleChoose)
         {
             ChangePortret(1, _malePortrets);
         }
@@ -70,7 +75,7 @@ public class PortretGenderNameModule : MenuModule
 
     public void PrevPortret()
     {
-        if (isMaleChoose)
+        if (_isMaleChoose)
         {
             ChangePortret(-1, _malePortrets);
         }

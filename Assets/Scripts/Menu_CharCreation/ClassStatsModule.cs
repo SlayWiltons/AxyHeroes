@@ -36,6 +36,46 @@ public class ClassStatsModule : MenuModule
     private int _per;
     private int _luc;
 
+    public string Class()
+    {
+        return _className.text;
+    }
+
+    public int Str()
+    {
+        return _str;
+    }
+
+    public int Agi()
+    {
+        return _agi;
+    }
+
+    public int Int()
+    {
+        return _int;
+    }
+
+    public int End()
+    {
+        return _end;
+    }
+
+    public int Wis()
+    {
+        return _wis;
+    }
+
+    public int Per()
+    {
+        return _per;
+    }
+
+    public int Luc()
+    {
+        return _luc;
+    }
+
     public void OnNextClick()
     {
         ChangeClass(1);
