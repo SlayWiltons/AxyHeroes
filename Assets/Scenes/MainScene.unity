@@ -25110,6 +25110,7 @@ GameObject:
   - component: {fileID: 1560564942}
   - component: {fileID: 1560564941}
   - component: {fileID: 1560564940}
+  - component: {fileID: 1560564943}
   m_Layer: 5
   m_Name: Final_Window
   m_TagString: Untagged
@@ -25219,6 +25220,30 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1560564943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560564938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec14fb50a4f6dc41840dc93ec18f6e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _modulePortret: {fileID: 1322702050}
+  _moduleClass: {fileID: 493268725}
+  _name: {fileID: 55177657}
+  _className: {fileID: 2132789049}
+  _portret: {fileID: 1330348217}
+  _classSTR: {fileID: 593263223}
+  _classAGI: {fileID: 801352558}
+  _classINT: {fileID: 1755913170}
+  _classEND: {fileID: 959460290}
+  _classWIS: {fileID: 2075060152}
+  _classPER: {fileID: 23648443}
+  _classLUC: {fileID: 1118994243}
 --- !u!1 &1565358322
 GameObject:
   m_ObjectHideFlags: 0
