@@ -186,7 +186,7 @@ public class ClassStatsModule : MenuModule
 
     public override void NextModule()
     {
-        //nextModule.SetActive(true);
+        nextModule.SetActive(true);
         gameObject.SetActive(false);
     }
 
