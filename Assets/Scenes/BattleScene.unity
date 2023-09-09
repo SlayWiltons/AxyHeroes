@@ -2348,11 +2348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a412050cc8fea478f58b25224cdf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characters:
-  - {fileID: 11400000, guid: 71f730d78ca4fb443bcb4184b5a73106, type: 2}
-  - {fileID: 11400000, guid: 71f730d78ca4fb443bcb4184b5a73106, type: 2}
-  - {fileID: 11400000, guid: 71f730d78ca4fb443bcb4184b5a73106, type: 2}
-  - {fileID: 11400000, guid: 71f730d78ca4fb443bcb4184b5a73106, type: 2}
+  _characterTemplateForTest: {fileID: 11400000, guid: 71f730d78ca4fb443bcb4184b5a73106, type: 2}
+  _characters: []
 --- !u!4 &1557513956
 Transform:
   m_ObjectHideFlags: 0
