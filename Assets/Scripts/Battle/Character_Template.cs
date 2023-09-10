@@ -8,6 +8,7 @@ public class Character_Template : ScriptableObject
     [SerializeField] private bool _isCharacter;
     [SerializeField] private string _name;
     [SerializeField] private string _className;
+    [SerializeField] private Sprite _portraitSprite;
     [SerializeField] private int _str;
     [SerializeField] private int _agi;
     [SerializeField] private int _int;
