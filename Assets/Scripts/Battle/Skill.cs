@@ -1,7 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Skill", menuName = "Skill", order = 3)]
-public class Skill : ScriptableObject
+public abstract class Skill : MonoBehaviour
 {
     public string Name;
 
