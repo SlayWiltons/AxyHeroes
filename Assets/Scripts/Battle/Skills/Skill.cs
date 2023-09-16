@@ -23,4 +23,9 @@ public abstract class Skill : MonoBehaviour
     {
 
     }
+
+    public virtual void OnSkillCanceled()
+    {
+
+    }
 }
